@@ -16,12 +16,9 @@ public class CommandWords
         "go", "quit", "help"
     };
 
-    /**
-     * Constructor - initialise the command words.
-     */
     public CommandWords()
     {
-        // nothing to do at the moment...
+
     }
 
     /**
@@ -29,13 +26,12 @@ public class CommandWords
      * @return true if a given string is a valid command,
      * false if it isn't.
      */
-    public boolean isCommand(String aString)
+    public boolean isCommand(String introducedCommand)
     {
         for(int i = 0; i < validCommands.length; i++) {
-            if(validCommands[i].equals(aString))
+            if(validCommands[i].equals(introducedCommand))
                 return true;
         }
-        // if we get here, the string was not found in the commands
         return false;
     }
 }

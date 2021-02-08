@@ -35,25 +35,15 @@ public class Command
         this.secondWord = secondWord;
     }
 
-    /**
-     * Return the command word (the first word) of this command. If the
-     * command was not understood, the result is null.
-     * @return The command word.
-     */
     public String getCommandWord()
     {
         return commandWord;
     }
 
-    /**
-     * @return The second word of this command. Returns null if there was no
-     * second word.
-     */
     public String getSecondWord()
     {
         return secondWord;
     }
-
     /**
      * @return true if this command was not understood.
      */
