@@ -118,7 +118,7 @@ public class Game {
      */
     private void goRoom(Command command) {
         //Si no hay una segunda palabra, no sabemos adónde ir ...
-        if(!command.hasSecondWord()) {
+        if(hasSecondWord()) {
             System.out.println("Go where?");
             return;
         }
@@ -171,11 +171,19 @@ public class Game {
      * @return true si este comando cierra el juego, false en caso contrario
      */
     private boolean quit(Command command) {
-        if(command.hasSecondWord()) {
+        if(hasSecondWord()) {
             System.out.println("Quit what?");
             return false;
         } else {
             return true;
         }
+    }
+
+    /**
+     * @return true if the command has a second word.
+     */
+    public boolean hasSecondWord(){
+        Command command = new Command();
+        return (command.getSecondWord() != null);
     }
 }

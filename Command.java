@@ -30,6 +30,8 @@ public class Command{
         this.secondWord = secondWord;
     }
 
+    public Command(){}
+
     public String getCommandWord(){
         return commandWord;
     }
@@ -42,13 +44,6 @@ public class Command{
      */
     public boolean isUnknown(){
         return (commandWord == null);
-    }
-
-    /**
-     * @return true if the command has a second word.
-     */
-    public boolean hasSecondWord(){
-        return (secondWord != null);
     }
 }
 
