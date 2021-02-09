@@ -12,13 +12,9 @@
  * known) then the command word is <null>.
  *
  * If the command had only one word, then the second word is <null>.
- * 
- * @author  Michael Kolling and David J. Barnes
- * @version 2008.03.30
  */
 
-public class Command
-{
+public class Command{
     private String commandWord;
     private String secondWord;
 
@@ -29,34 +25,29 @@ public class Command
      *                  was not recognised.
      * @param secondWord The second word of the command.
      */
-    public Command(String firstWord, String secondWord)
-    {
+    public Command(String firstWord, String secondWord){
         commandWord = firstWord;
         this.secondWord = secondWord;
     }
 
-    public String getCommandWord()
-    {
+    public String getCommandWord(){
         return commandWord;
     }
 
-    public String getSecondWord()
-    {
+    public String getSecondWord(){
         return secondWord;
     }
     /**
      * @return true if this command was not understood.
      */
-    public boolean isUnknown()
-    {
+    public boolean isUnknown(){
         return (commandWord == null);
     }
 
     /**
      * @return true if the command has a second word.
      */
-    public boolean hasSecondWord()
-    {
+    public boolean hasSecondWord(){
         return (secondWord != null);
     }
 }

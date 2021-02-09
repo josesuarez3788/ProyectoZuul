@@ -4,20 +4,15 @@
  * 
  * This class holds an enumeration of all command words known to the game.
  * It is used to recognise commands as they are typed in.
- *
- * @author  Michael Kolling and David J. Barnes
- * @version 2008.03.30
  */
 
-public class CommandWords
-{
+public class CommandWords{
     // a constant array that holds all valid command words
     private static final String[] validCommands = {
         "go", "quit", "help"
     };
 
-    public CommandWords()
-    {
+    public CommandWords(){
 
     }
 
@@ -26,8 +21,7 @@ public class CommandWords
      * @return true if a given string is a valid command,
      * false if it isn't.
      */
-    public boolean isCommand(String introducedCommand)
-    {
+    public boolean isCommand(String introducedCommand){
         for(int i = 0; i < validCommands.length; i++) {
             if(validCommands[i].equals(introducedCommand))
                 return true;
