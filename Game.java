@@ -143,22 +143,26 @@ public class Game {
             System.out.println("There is no door!");
         } else {
             currentRoom = nextRoom;
-            System.out.println("You are " + getCurrentRoom().getDescription());
-            System.out.print("Exits: ");
-            if(getCurrentRoom().northExit != null) {
-                System.out.print("north ");
-            }
-            if(getCurrentRoom().eastExit != null) {
-                System.out.print("east ");
-            }
-            if(getCurrentRoom().southExit != null) {
-                System.out.print("south ");
-            }
-            if(getCurrentRoom().westExit != null) {
-                System.out.print("west ");
-            }
-            System.out.println();
+            moveRoom();
         }
+    }
+
+    public void moveRoom(){
+        System.out.println("You are " + getCurrentRoom().getDescription());
+        System.out.print("Exits: ");
+        if(getCurrentRoom().northExit != null) {
+            System.out.print("north ");
+        }
+        if(getCurrentRoom().eastExit != null) {
+            System.out.print("east ");
+        }
+        if(getCurrentRoom().southExit != null) {
+            System.out.print("south ");
+        }
+        if(getCurrentRoom().westExit != null) {
+            System.out.print("west ");
+        }
+        System.out.println();
     }
 
     /** 
