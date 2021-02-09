@@ -1,18 +1,15 @@
 /**
- *  This class is the main class of the "World of Zuul" application. 
- *  "World of Zuul" is a very simple, text based adventure game.  Users 
- *  can walk around some scenery. That's all. It should really be extended 
- *  to make it more interesting!
+ *  Esta clase es la clase principal de la aplicación "World of Zuul".
+ * "World of Zuul" es un juego de aventuras basado en texto muy simple. Usuarios
+ *  Puede caminar por algunos paisajes. Eso es todo. 
+ *  ¡Realmente debería extenderse para hacerlo más interesante!
  * 
- *  To play this game, create an instance of this class and call the "play"
- *  method.
+ *  Para jugar a este juego, 
+ *  crea una instancia de esta clase y llama al método "play".
  * 
- *  This main class creates and initialises all the others: it creates all
- *  rooms, creates the parser and starts the game.  It also evaluates and
- *  executes the commands that the parser returns.
- * 
- *   
- * 
+ *  Esta clase principal crea e inicializa todas las demás: crea todas las habitaciones, 
+ *  crea el analizador e inicia el juego. También evalúa y 
+ *  ejecuta los comandos que devuelve el analizador.
  */
 
 public class Game {
@@ -21,7 +18,7 @@ public class Game {
     private Room currentRoom;
     private Menu menu = new Menu();
     /**
-     * Create the game and initialise its internal map.
+     * Crea el juego e inicializa su mapa interno.
      */
     public Game() {
         createRooms();
@@ -33,7 +30,7 @@ public class Game {
     }
 
     /**
-     * Create all the rooms and link their exits together.
+     * Crea todas las habitaciones y vincula sus salidas.
      */
     private void createRooms() {
         Room outside, theatre, pub, lab, office;
