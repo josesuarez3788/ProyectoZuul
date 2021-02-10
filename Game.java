@@ -124,16 +124,16 @@ public class Game {
         // Intenta salir de la habitación actual.
         Room nextRoom = null;
         if(direction.equals("north")) {
-            nextRoom = getCurrentRoom().northExit;
+            nextRoom = getCurrentRoom().getNorthExit();
         }
         if(direction.equals("east")) {
-            nextRoom = getCurrentRoom().eastExit;
+            nextRoom = getCurrentRoom().getEastExit();
         }
         if(direction.equals("south")) {
-            nextRoom = getCurrentRoom().southExit;
+            nextRoom = getCurrentRoom().getSouthExit();
         }
         if(direction.equals("west")) {
-            nextRoom = getCurrentRoom().westExit;
+            nextRoom = getCurrentRoom().getWestExit();
         }
 
         if (nextRoom == null) {
@@ -147,16 +147,16 @@ public class Game {
     public void moveRoom(){
         System.out.println("You are " + getCurrentRoom().getDescription());
         System.out.print("Exits: ");
-        if(getCurrentRoom().northExit != null) {
+        if(getCurrentRoom().getNorthExit() != null) {
             System.out.print("north ");
         }
-        if(getCurrentRoom().eastExit != null) {
+        if(getCurrentRoom().getEastExit() != null) {
             System.out.print("east ");
         }
-        if(getCurrentRoom().southExit != null) {
+        if(getCurrentRoom().getSouthExit() != null) {
             System.out.print("south ");
         }
-        if(getCurrentRoom().westExit != null) {
+        if(getCurrentRoom().getWestExit() != null) {
             System.out.print("west ");
         }
         System.out.println();

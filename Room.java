@@ -5,11 +5,11 @@
  * to the neighboring room, or null if there is no exit in that direction.
  */
 public class Room {
-    public String descRoom; //the room description
-    public Room northExit;
-    public Room southExit;
-    public Room eastExit;
-    public Room westExit;
+    private String descRoom; //the room description
+    private Room northExit;
+    private Room southExit;
+    private Room eastExit;
+    private Room westExit;
 
     /**
      * Create a room described "description". Initially, it has
@@ -34,6 +34,42 @@ public class Room {
 
     public String getDescription() {
         return descRoom;
+    }
+
+    public void setDescRoom(String descRoom) {
+        this.descRoom = descRoom;
+    }
+
+    public Room getNorthExit() {
+        return northExit;
+    }
+
+    public void setNorthExit(Room northExit) {
+        this.northExit = northExit;
+    }
+
+    public Room getSouthExit() {
+        return southExit;
+    }
+
+    public void setSouthExit(Room southExit) {
+        this.southExit = southExit;
+    }
+
+    public Room getEastExit() {
+        return eastExit;
+    }
+
+    public void setEastExit(Room eastExit) {
+        this.eastExit = eastExit;
+    }
+
+    public Room getWestExit() {
+        return westExit;
+    }
+
+    public void setWestExit(Room westExit) {
+        this.westExit = westExit;
     }
 
 }

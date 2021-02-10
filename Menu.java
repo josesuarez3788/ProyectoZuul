@@ -8,16 +8,16 @@ public class Menu {
         System.out.println("You are " + currentRoom.getDescription());
         System.out.print("Exits: ");
 
-        if(currentRoom.northExit != null) {
+        if(currentRoom.getNorthExit() != null) {
             System.out.print("north ");
         }
-        if(currentRoom.eastExit != null) {
+        if(currentRoom.getEastExit() != null) {
             System.out.print("east ");
         }
-        if(currentRoom.southExit != null) {
+        if(currentRoom.getSouthExit() != null) {
             System.out.print("south ");
         }
-        if(currentRoom.westExit != null) {
+        if(currentRoom.getWestExit() != null) {
             System.out.print("west ");
         }
         System.out.println();
