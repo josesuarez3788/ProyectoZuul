@@ -1,30 +1,46 @@
 /**
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
- * 
- * This class holds an enumeration of all command words known to the game.
- * It is used to recognise commands as they are typed in.
+ * Testa clase es parte de la aplicación "World of Zuul".
+ * "World of Zuul" es un juego de aventuras basado en texto muy simple.
+ * Esta clase contiene una enumeración de todas las palabras de comando conocidas en el juego.
+ * Se utiliza para reconocer los comandos a medida que se escriben.
  */
 
 public class CommandWords{
-    // a constant array that holds all valid command words
-    private static final String[] validCommands = {
-        "go", "quit", "help"
-    };
+    private final String commandGo = "go";
+    private final String commandQuit = "quit";
+    private final String commandHelp = "help";
 
     public CommandWords(){
 
     }
 
+    public String getCommandGo() {
+        return commandGo;
+    }
+
+    public String getCommandQuit() {
+        return commandQuit;
+    }
+
+    public String getCommandHelp() {
+        return commandHelp;
+    }
+
     /**
-     * Check whether a given String is a valid command word. 
-     * @return true if a given string is a valid command,
-     * false if it isn't.
+     * Verifique si una cadena dada es una palabra de comando válida. 
+     * @return verdadero si una cadena dada es un comando válido,
+     *  falso si no lo es.
      */
-    public boolean isCommand(String introducedCommand){
-        for(int i = 0; i < validCommands.length; i++) {
-            if(validCommands[i].equals(introducedCommand))
-                return true;
+    public boolean isCommand(String introduceCommand) {
+        
+        if(introduceCommand.equals(this.commandGo)) {
+            return true;
+        }
+        if(introduceCommand.equals(this.commandHelp)) {
+            return true;
+        }
+        if(introduceCommand.equals(this.commandQuit)) {
+            return true;
         }
         return false;
     }
