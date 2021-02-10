@@ -5,7 +5,6 @@
  */
 
 /**
- *
  * @author clon_
  */
 public class MainGame {
